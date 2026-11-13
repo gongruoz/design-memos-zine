@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e8">
+  <meta name="description" content="六个关键词，一本由作品、图像、影像和声音组成的新千年设计备忘录。">
+  <title>新千年设计备忘录</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Serif+SC:wght@600;700;800;900&display=swap">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script src="cases.js?v=3" defer></script>
+  <script src="profiles.js?v=3" defer></script>
+  <script src="zine.js?v=3" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contents">跳到主题目录</a>
+  <header class="masthead frame" id="top">
+    <a class="wordmark" href="#top"><span aria-hidden="true">✳</span> DESIGN MEMOS</a>
+    <nav aria-label="刊物导航">
+      <a href="#contents">主题目录</a>
+      <a href="#work-index">作品索引</a>
+    </nav>
+  </header>
+  <main class="frame">
+    <section class="cover" aria-labelledby="cover-title">
+      <div class="cover-copy">
+        <p class="folio">设计备忘录 <span>/</span> 作品特刊</p>
+        <h1 id="cover-title">新千年<br>设计备忘录<span class="punctuation">.</span></h1>
+        <p class="cover-en" lang="en">Design Memos<br>for the Next Millennium</p>
+        <p class="cover-dek">从身体的试探到一座城市的余温。沿着六个关键词，看设计怎样改变感知、环境和人与人相遇的条件。</p>
+        <a class="cover-link" href="#contents">翻开这期 <span aria-hidden="true">↘</span></a>
+      </div>
+      <figure class="cover-figure">
+        <!-- ImageGen cover prompt. Use case: illustration-story. Asset: original cover art for a high-design print zine about future design, perception, climate and technology. Wide landscape 3:2, edge-to-edge saturated ultramarine/cobalt blue risograph ink on vivid blue stock. One enormous finely detailed black-blue photographic solarized X-ray of a real open spruce pinecone at the center, canted diagonally upper-left to lower-right, its intricate scales unravel on the right into very fine etched optical diagrams and sweeping orbit curves. A single vivid acid yellow chartreuse paper disc, approximately a quarter of frame height, sits partially behind the cone in the upper-right, and a small rough chartreuse four-point star sits toward bottom right. Ink texture, black grain, beautiful etched details, dimensional and tactile, speculative natural-history cyanotype, sharp editorial crop. Full bleed blue edges. Strong striking silhouette and generous pockets of open blue around the specimen. No words, letters, numbers, symbols resembling text, border, framing, watermarks, people, mockup, or white background. -->
+        <img class="cover-image" src="assets/cover.jpg" alt="深蓝色松果的鳞片延展成细密曲线，背后是一轮荧光黄圆盘" fetchpriority="high">
+        <figcaption><span>封面图 · 松果鳞片的运动</span><span lang="en">COVER ART / 2026</span></figcaption>
+      </figure>
+    </section>
+    <section class="contents" id="contents" aria-labelledby="contents-title">
+      <div class="section-label">
+        <h2 id="contents-title">主题目录</h2>
+        <span lang="en">CONTENTS</span>
+      </div>
+      <nav id="theme-nav" class="theme-nav" aria-label="六个关键词"></nav>
+    </section>
+    <section id="spread" class="spread" aria-label="当前主题"></section>
+    <section class="work-index" id="work-index" aria-labelledby="index-title">
+      <div class="section-label"><h2 id="index-title">作品索引</h2><span id="index-total"></span></div>
+      <div id="index-groups" class="index-groups"></div>
+    </section>
+    <noscript><p>启用 JavaScript 即可切换主题、展开作品与播放媒体。</p></noscript>
+  </main>
+  <footer class="footer frame">
+    <span>新千年设计备忘录 <span class="footer-dot" aria-hidden="true">✳</span> 作品特刊</span>
+    <a href="#top">回到封面 <span aria-hidden="true">↑</span></a>
+  </footer>
+  <dialog id="work-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-bar">
+      <span id="dialog-kicker"></span>
+      <button type="button" id="dialog-close" aria-label="关闭作品">×</button>
+    </div>
+    <div id="dialog-body"></div>
+    <div class="dialog-pagination">
+      <button type="button" id="work-prev">← 上一件</button>
+      <button type="button" id="work-next">下一件 →</button>
+    </div>
+  </dialog>
+</body>
+</html>
